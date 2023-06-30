@@ -3,7 +3,7 @@ import { Octicons, MaterialIcons } from "@expo/vector-icons";
 import { COLORS, FONTS, SIZES, images } from "../constants";
 import * as Location from "expo-location";
 import { useEffect, useState } from "react";
-import Buttons from "./Buttons";
+import ProfileContact from "./ProfileContact";
 import ProfileFeatures from "./ProfileFeatures";
 import ProfileSettings from "./ProfileSettings";
 
@@ -84,7 +84,7 @@ const ProfileInfo = () => {
         <Text style={{ ...FONTS.body3, marginRight: 8 }}>{text}</Text>
         <Octicons name="location" size={18} color={COLORS.secondary} />
       </View>
-      <Buttons />
+      <ProfileContact />
       <ProfileFeatures />
       <ProfileSettings />
     </View>

@@ -5,7 +5,7 @@ import Header from "../components/Header";
 import PageContainer from "../components/PageContainer";
 import Card from "../components/Card";
 import { Feather } from "@expo/vector-icons";
-import { donationRequests } from "../constants/data";
+import {donationRequests } from "../constants/data";
 
 const DonationRequest = () => {
   return (
@@ -23,13 +23,14 @@ const DonationRequest = () => {
         </View>
         <ScrollView style={{ flex: 1 }}>
           <View style={{ justifyContent: "center", alignItems: "center" }}>
-            {donationRequests.map((donationRequest, index) => (
+            {donationRequests.map((request, index) => (
               <Card
                 key={index}
-                name={donationRequest.name}
-                location={donationRequest.location}
-                postedDate={donationRequest.postedDate}
-                bloodType={donationRequest.bloodType}
+                image={request.image}
+                name={request.name}
+                location={request.location}
+                postedDate={request.postedDate}
+                bloodType={request.bloodType}
                 onPress={()=> console.log("123")}
               />
             ))}

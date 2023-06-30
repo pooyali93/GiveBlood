@@ -52,7 +52,7 @@ const OTPValidation = ({ navigation }) => {
             <TouchableOpacity
               style={{ marginVertical: 10 }}
               onPress={() => navigation.navigate("Login")}>
-              <Text style={{ ...FONTS.body2, color: COLORS.primary, textAlign: 'right' , marginRight:10}}>دوبارە داوای کۆد بکەوە</Text>
+              <Text style={{ ...FONTS.body2, color: COLORS.primary, textAlign: 'right' , marginRight:10}}>Resend Code</Text>
             </TouchableOpacity>
         </View>
       </PageContainer>

@@ -13,10 +13,10 @@ const Header = ({ iconLeft, iconRight, iconPack: IconPack, title, onEdit }) => {
           <IconPack name={iconLeft} size={24} style={styles.icon} />
         )}
       </TouchableOpacity>
-      <Text style={{ ...FONTS.h4 }}>{title}</Text>
+      <Text style={{ ...FONTS.h4, color:COLORS.white }}>{title}</Text>
       <TouchableOpacity style={{ marginRight: 5 }} onPress={onEdit}>
         {iconRight && IconPack && (
-          <IconPack name={iconRight} size={24} color={COLORS.black} />
+          <IconPack name={iconRight} size={24} style={styles.icon} />
         )}
       </TouchableOpacity>
     </View>
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: COLORS.lightBlue,
+    backgroundColor: COLORS.primary,
     paddingVertical: 12,
     paddingHorizontal: 12,
     borderRadius: 25,
@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 10,
+    color:COLORS.white
   },
 });
 

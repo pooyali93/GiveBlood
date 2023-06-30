@@ -5,42 +5,42 @@ export const donors = [
         id: '1',
         image: images.user1,
         name: 'Yasin Hossain',
-        location: 'Mohammedpur',
+        location: 'Hawler',
         bloodType: 'A+',
     },
     {
         id: '2',
         image: images.user2,
-        name: 'Mohammed Sami',
-        location: 'Mirpur 10, Dhaka',
+        name: 'Mo Abdulla',
+        location: 'Ranya',
         bloodType: 'AB+',
     },
     {
         id: '3',
         image: images.user3,
-        name: 'Rahimun Islam',
-        location: 'Chittagong',
+        name: 'Krmanj Mohammed',
+        location: 'Slemani',
         bloodType: 'B-',
     },
     {
         id: '4',
         image: images.user4,
-        name: 'Rumana',
-        location: 'Lakshmipur',
+        name: 'Jwana Ahmed',
+        location: 'Duhok',
         bloodType: 'O+',
     },
     {
         id: '5',
         image: images.user5,
-        name: 'Jubayer Ahmed',
-        location: 'Mohammedpur, Dhaka',
+        name: 'Sara Karem',
+        location: 'Zaxo',
         bloodType: 'A+',
     },
     {
         id: '6',
         image: images.user6,
-        name: 'Edward Lio',
-        location: 'Mohammedpur, Dhaka',
+        name: 'Kurda Salam',
+        location: 'Halabja',
         bloodType: 'B+',
     },
 ]
@@ -108,6 +108,18 @@ export const donationRequests = [
         location: 'Erbil Hospital',
         postedDate: '5 min',
         bloodType: 'B+'
+    },
+    {
+        name: 'Kamal Ahmed',
+        location: 'Ranya Hospital',
+        postedDate: '25 min',
+        bloodType: 'O+'
+    },
+    {
+        name: 'Samir Abdulla',
+        location: 'Erbil Hospital',
+        postedDate: '15 min',
+        bloodType: 'AB+'
     },
 ]
 

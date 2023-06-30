@@ -1,6 +1,5 @@
 import { KeyboardAvoidingView, Platform } from "react-native";
 import React from "react";
-import { COLORS } from "../constants";
 
 const PageContainer = (props) => {
   return (

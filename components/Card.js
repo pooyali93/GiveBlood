@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import { COLORS, FONTS, SIZES, images } from "../constants";
-import { Ionicons } from "@expo/vector-icons";
+import { Feather } from "@expo/vector-icons";
 import { Image } from "react-native";
 
 const Card = (props) => {
@@ -10,37 +10,33 @@ const Card = (props) => {
         width: "95%",
         //height: 148,
         borderRadius: SIZES.padding,
-        backgroundColor: COLORS.lightWhite,
+        backgroundColor: COLORS.secondary,
         flexDirection: "row",
-        justifyContent: "space-between",
+        justifyContent:'flex-start',
+        alignItems: "center",
         paddingHorizontal: SIZES.padding,
-        paddingVertical: SIZES.padding,
+        paddingVertical: 8,
         marginVertical: 4,
         borderColor: COLORS.blue,
-        borderWidth: 1,
-        //elevation: 2,
+        //borderWidth: 1,
+        elevation: 2,
         shadowColor: COLORS.secondaryWhite,
         shadowRadius: 3,
       }}
     >
-      <Image
-        source={images.user4}
-        resizeMode="contain"
-        style={{
-          height: 100,
-          width: 100,
-          borderRadius: SIZES.padding,
-        }}
-      />
-      <View
-        style={{
-          flexDirection: "column",
-          marginRight:60
-        }}
-      >
+        <Image
+          source={props.image}
+          resizeMode="contain"
+          style={{
+            height: 100,
+            width: 100,
+            borderRadius: SIZES.padding,
+          }}
+        />
+      <View style={{ flexDirection: "column", marginLeft:12 }}>
         <Text
           style={{
-            fontSize: 16,
+            fontSize: 14,
             color: COLORS.black,
             fontWeight: 700,
           }}
@@ -51,7 +47,7 @@ const Card = (props) => {
           style={{
             fontSize: 14,
             color: COLORS.primary,
-            marginVertical: 2,
+            marginTop: 28,
           }}
         >
           Location
@@ -75,28 +71,31 @@ const Card = (props) => {
         style={{
           flexDirection: "column",
           alignItems: "center",
+          marginLeft:'auto'
         }}
       >
-        <Text style={{ ...FONTS.h1, color: COLORS.primary }}>
+        <Text style={{ ...FONTS.h3, color: COLORS.primary }}>
           {props.bloodType}
         </Text>
 
         <TouchableOpacity onPress={props.onPress}>
-        <View style={{
-                alignItems:'center',
-                justifyContent:'center',
-                backgroundColor:COLORS.primary,
-                height:Platform.OS == "ios" ? 40 : 50,
-                width:Platform.OS == "ios" ? 40 : 50,
-                borderRadius:Platform.OS == "ios" ? 20 : 25,
-                marginTop: 22,
-                marginRight:10
-              }}>
-          <Ionicons
-            name="call-outline"
-            size={26}
-            style={{ color: COLORS.white }}
-          />
+          <View
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: COLORS.primary,
+              height: Platform.OS == "ios" ? 35 : 45,
+              width: Platform.OS == "ios" ? 35 : 45,
+              borderRadius: Platform.OS == "ios" ? 17.5 : 22.5,
+              marginTop: 22,
+              marginRight: 10,
+            }}
+          >
+            <Feather
+              name="phone-call"
+              size={22}
+              style={{ color: COLORS.white }}
+            />
           </View>
         </TouchableOpacity>
       </View>
